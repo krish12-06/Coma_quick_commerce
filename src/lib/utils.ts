@@ -64,3 +64,10 @@ export function createSlug(text: string): string {
     .replace(/--+/g, '-')
     .trim();
 }
+
+/**
+ * Get the number of products in a category
+ */
+export function getCategoryProductCount(category: string, products: any[]): number {
+  return products.filter(product => product.category === category).length;
+}
